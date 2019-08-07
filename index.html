@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header class="clearfix">
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
+    <header class="clearfix">
         <input type="checkbox" id="menu-toggle" name="menu-toggle">
         <nav class="pages">
             <ul class="clearfix">
@@ -45,7 +46,7 @@
         </nav>
    </header> 
 
-   <main>
+   <main id="maincontent">
        <section class="new-menu clearfix">
             <img src="assets/right-photo.jpg"
             alt="Golden brown French fries and a bacon cheeseburger topped with a fried egg, tomato and lettuce">
@@ -146,8 +147,8 @@
 
             <div class="newsletter">
                 <h2>Stay Updated</h2>
-                <p>Subscribe to our newsletter to stay updated.</p>
                 <form>
+                <p>Subscribe to our newsletter to stay updated.</p>
                     <label for="email" name= "email" class="visuallyhidden">Email address</label>
                     <input type="email" name="email" class="email" placeholder="email address">
                     <button type="submit">Subscribe</button>
