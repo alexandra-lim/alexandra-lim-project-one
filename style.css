@@ -30,6 +30,10 @@ a {
     color: #1f2022;
 }
 
+button:hover, a:hover {
+    transition: 0.3s linear;
+}
+
 nav li {
     list-style: none;
 }
@@ -55,17 +59,13 @@ p {
 
 .pages a:hover {
     color: #e75605;
-    transition: 0.3s linear;
 }
 
-.text-content a:hover {
+.text-content a:hover, button:hover {
     color: #e75605;
-    border: 3px solid #1f2022;
-    transition: 0.3s linear;
 }
 
-/* header */
-
+/* skip-link */
 .skip-link {
   position: absolute;
   left: -1000px;
@@ -73,11 +73,16 @@ p {
   z-index: 999;
   background: white;
   color: black;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transition: 0.5s linear
 }
 
 .skip-link:focus {
   left: 0;
 }
+
+/* header */
 
 header {
     background: #fff url(assets/header-burger.png) left -100px bottom no-repeat;
@@ -199,6 +204,10 @@ section {
     color: #fff;
 }
 
+.location-menu-reach a:hover{
+    color: #1f2022;
+}
+
 /* instagram */
 
 .gallery {
@@ -236,7 +245,6 @@ footer ul {
 
 footer li {
     font-size: 1.4rem;
-    font-weight: 700;
     width: 25%;
     float: left;
 }
@@ -246,10 +254,10 @@ footer li {
 }
 
 .contact a {
-    font-family: 'Catamaran', sans-serif;
     font-size: 1.6rem;
     text-transform: none;
     margin: 0;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .contact .email {
@@ -282,6 +290,11 @@ footer li {
     color: #1f2022;
     font-family: 'Catamaran', sans-serif;
     text-align: center;
+    border: none;
+}
+
+.newsletter input:focus {
+    border: 2px solid #e75605;
 }
 
 .newsletter button {
@@ -303,6 +316,7 @@ footer li {
 
 /* Landscape phones down */
 @media (min-width: 470px) {
+    /* header */
     header {
         margin-top: 15rem; 
     }
@@ -429,6 +443,7 @@ footer li {
         display: inline-block;
     }     
     
+/* location menu reach */
     .location-menu-reach nav {
         width: 75%;
     }
@@ -440,10 +455,10 @@ footer li {
     }
 
 /* footer */
-    footer .pages ul {
-        width: 60%;
-        margin: 0 auto;
+    footer li {
+        font-size: 2rem;
     }
+
     .contact, .newsletter {
         float: left;
         width: 50%;
@@ -467,6 +482,7 @@ footer li {
 /* Portrait tablet and small desktops */
 @media (min-width: 980px){
 
+/* general styles */
     .wrapper {
         width: 80%;
     }    
@@ -493,7 +509,7 @@ footer li {
 
     .social {
         display: block;
-        clear: both;
+        /* clear: both; */
         margin-left: 60%;
     }
 
@@ -520,7 +536,7 @@ footer li {
     .text-content {
         text-align: left;
         margin: 0;
-        padding: 10rem;
+        padding: 12rem;
     }
 
     .text-content h2 {
@@ -557,11 +573,17 @@ footer li {
     } 
 
     .experience .text-content {
-        padding-top: 10rem;
+        padding-top: 12rem;
     }
 
     .dessert {
         padding: 10rem 0;
+    }
+
+/* location menu reach */
+
+    .location-menu-reach {
+        padding: 15rem 0;
     }
 
 /* instagram */
@@ -574,6 +596,10 @@ footer li {
 
     footer .pages {
         width: 70%;
+    }
+
+    footer li {
+        font-size: 2rem;
     }
 
     .newsletter p {
@@ -597,7 +623,6 @@ footer li {
     .contact a {
         font-size: 2rem;
     }
-
 }
 
 
